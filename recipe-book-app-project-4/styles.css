@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #dbdada;
+}
+
+.header {
+    width: 100%;
+    height: 9%;
+    background-color: #825231;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header > p {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.foodCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    height: 15vh;
+    margin-top: 15px;
+    width: 60%;
+}
+
+.img {
+    height: 15vh;
+    width: 15vh;
+    border-bottom-left-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.viewBtn {
+    border: none;
+    height: 5vh;
+    width: 15vh;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #212121;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: background-color 0.3s ease;
+}
+
+.viewBtn:hover {
+    background-color: #494848;
+}
+.viewBtn > a {
+    all: unset;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .foodCard {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+        width: 90%;
+    }
+
+    .img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .name {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .viewBtn {
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+        margin-top: 10px;
+    }
+
+    .viewBtn > a {
+        line-height: 40px;
+        display: block;
+        text-align: center;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .foodCard p {
+        font-size: 14px;
+    }
+
+    .header > p {
+        font-size: 24px;
+    }
+}
