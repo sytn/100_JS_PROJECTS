@@ -42,13 +42,13 @@ const foodData = [
         name: "Vegetarian Spring Rolls With Garlic Lime Sauce",
         img: "https://img.spoonacular.com/recipes/664708-556x370.jpg",
         ingredients: "1 head of butter leaf lettuce, 2 carrots, julienned, 1/2 teaspoon ginger, 3/4 cup hoisin sauce, Garlic Lime Hoisin Sauce, 1 jicama, 2 tablespoons lime, 1 red bell pepper, 12 rice paper sheets, Vegetarian Spring Roll, 12 leaves of Thai basil, 1 yellow bell pepper, 1 teaspoon Saracha (or to taste), 1 teaspoon Saracha (or to taste)",
-        link: "https://www.foodista.com/recipe/PTDX868M/vegetarian-spring-rolls-with-garlic-lime-sauce",
+        link: "https://www.foodista.com/recipe/PTDX868M/vegetarian-spring-rolls-with-garlic-lime-sauce"
     },
     {
         name: "Crispy Panko and Herb Crusted Salmon",
         img: "https://img.spoonacular.com/recipes/640828-556x370.jpg",
         ingredients: "2 pound salmon fillet, 1/2 leek finely chopped (white part of the leek), 1/2 red pepper diced, 6 cherry tomatoes chopped, 2-3 tablespoons extra virgin olive oil, 1 1/2 cup panko crumbs, 1/2 cup Italian parsley finely chopped, 1 garlic clove finely chopped, zest of 1 lemon, 1/2 teaspoon salt, dash of pepper, 3 tablespoons extra virgin olive oil",
-        link: "https://www.foodista.com/recipe/THDLRSLW/crispy-panko-and-herb-crusted-salmon",
+        link: "https://www.foodista.com/recipe/THDLRSLW/crispy-panko-and-herb-crusted-salmon"
     },
     {
         name: "Tuna Noodle Casserole: Mommie Cooks",
@@ -62,5 +62,18 @@ const foodData = [
         ingredients: "4 burger buns, 1 tablespoon Fresh Basil, Chopped (about 5 leaves worth), 1 clove Garlic, 1 Green Onion, Chopped, 1/4 Lime, Juiced, 1/4 cup Mayonnaise, 1 teaspoon Oyster Sauce, 1/2 teaspoon Powdered Ginger, 1 pound Salmon, 5 1/2 tablespoons Sesame Oil, 2 tablespoons Sour Cream, 1 tablespoon Soy Sauce",
         link: "https://www.foodista.com/recipe/FRT38YTC/asian-salmon-burgers-with-tangy-ginger-lime-sauce"
     }
-]
+];
 
+const container = document.getElementById('cardContainer');
+const template = document.getElementById('food-card-template');
+
+foodData.forEach(food => {
+    const clone = template.content.cloneNode(true);
+    clone.querySelector('img').src = food.img;
+    clone.querySelector('img').alt = food.name;
+    clone.querySelector('.name').textContent = food.name;
+    clone.querySelector('.ingredients').innerHTML = `<strong>Ingredients:</strong><br>${food.ingredients}`;
+    clone.querySelector('a').href = food.link;
+
+    container.appendChild(clone);
+});

@@ -12,19 +12,25 @@
     <header class="header">
         <p>Recipe Book App</p>
     </header>
-    <div class="container">
-        <div class="foodCard">
-                <img src="https://www.foodista.com/sites/default/files/EC_tzatziki.jpg" alt="tzatziki" class="img">
-                <h3 class="name">Tzatziki</h3>
-                <p><strong>Ingredients: </strong> 
-                    2 cucumbers, peeled, seeded and coarsely grated,<br> 
-                    ¼ tsp sea salt, 1 ½ cups of yogurt, ½ cup sour cream,<br> 
-                    3 Tbs olive oil, 1 Tbs vinegar, 2 cloves garlic, finely minced,<br> 
-                    ¼ tsp white pepper, 1 tsp fresh dill, chopped, or 1 Tbs dried dill <br>
-                </p>
-                <button class="viewBtn"><a href="https://www.foodista.com/recipe/8RBBN8GT/tzadziki">View Recipe</a></button>
-        </div>
+
+    <div class="container" id="cardContainer">
+        <!-- Cards will be injected here -->
     </div>
+
+    <!-- Template for a recipe card -->
+    <template id="food-card-template">
+    <div class="foodCard">
+        <img src="" alt="" class="img">
+        <div class="foodCard-content">
+            <h3 class="name"></h3>
+            <p class="ingredients"></p>
+        </div>
+        <button class="viewBtn">
+            <a href="" target="_blank">View Recipe</a>
+        </button>
+    </div>
+</template>
+
     <script src="./script.js"></script>
 </body>
 </html>
