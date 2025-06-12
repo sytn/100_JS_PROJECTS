@@ -1,0 +1,54 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    max-height: 100vh;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;  /* dark background */
+    color: white;
+    padding: 15px 30px;
+    position: sticky;      /* sticky navbar */
+    top: 0;                /* stick to top */
+    z-index: 1000;         /* stay on top */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navbar links container */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Navbar links */
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Link hover effect */
+.navbar ul li a:hover {
+    color: #ff6600;  /* orange highlight on hover */
+}
+
+.hero-image {
+    width: 100%;
+}
